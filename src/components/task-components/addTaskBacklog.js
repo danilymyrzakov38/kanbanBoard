@@ -12,9 +12,9 @@ function AddTaskBacklog() {
     // Обработчик изменения значения инпута
     const handleInputChange = (event) => {
         setInputValue(event.target.value);
-        let inputValueLength = inputValue.length;
+        let inputValueLength = event.target.value;
 
-        if(inputValueLength > 3) {
+        if(inputValueLength.length > 3) {
             setButtonActive(true);
         } else {
             setButtonActive(false);
